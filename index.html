@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Paintberry</title>
+    <link rel="stylesheet" href="./libs/photon/css/photon.css"
+  </head>
+  <body class="window">
+      <header class="toolbar toolbar-header">
+        <h1 class="title">PaintBerry</h1>
+        <div class="toolbar-actions">
+          <div class="btn-group">
+            <button class="btn btn-default">
+              <span class="icon icon-pencil"></span>
+            </button>
+            <button class="btn btn-default active">
+              <span class="icon icon-brush"></span>
+            </button>
+            <button class="btn btn-default">
+              <span class="icon icon-cloud"></span>
+            </button>
+            <button class="btn btn-default">
+              <span class="icon icon-folder"></span>
+            </button>
+          </div>
+
+          <button class="btn btn-default">
+            <input id="color-picker" type="color" value="#663300">
+          </button>
+
+          <button class="btn btn-default btn-dropdown pull-right">
+            <span class="icon icon-megaphone"></span>
+          </button>
+        </div>
+      </header>
+      <section class="window-content">
+        <canvas id="canvas"></canvas>
+      </section>
+
+  </body>
+
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+    require('./scripts/paint.js')
+  </script>
+</html>
